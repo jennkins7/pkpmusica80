@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url("../public/fondo.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Barra de música */
+.audio-player {
+  width: 150px;         /* más pequeña */
+  display: block;
+  margin: 20px auto 20px 20px; /* espacio y alineado a la izquierda */
+  filter: drop-shadow(0 0 8px #0ff);
+  border-radius: 10px;
+}
+
+/* Caja de pregunta */
+/* Caja de la pregunta estilo neón */
+.question-box {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  max-width: 400px;
+  padding: 15px 20px;
+  background: rgba(0, 0, 0, 0.6);   /* oscuro semitransparente */
+  border: 2px solid #0ff;
+  border-radius: 12px;
+  z-index: 10;
+}
+
+/* Texto neón */
+.neon-title {
+  color: #0ff;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: right;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+  animation: neonPulse 2s infinite alternate;
+}
+
+/* Animación glow */
+@keyframes neonPulse {
+  from {
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+  }
+  to {
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+  }
+}
+
+
+/* Respuestas abajo */
+/* Caja de respuestas en dos columnas */
+.answer-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columnas */
+  gap: 20px; /* espacio entre botones */
+  justify-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Botones de respuesta con neon */
+/* Botones de respuesta con fondo semitransparente */
+.neon-button {
+  padding: 15px;
+  font-size: 18px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6); /* oscuro semitransparente */
+  border: 2px solid #0ff;
+  border-radius: 12px;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+  box-shadow: 0 0 5px #0ff, 0 0 10px #0ff inset;
+  transition: 0.3s;
+  width: 90%; 
+  cursor: pointer;
+}
+
+/* Hover más brillante */
+.neon-button:hover {
+  background: rgba(0, 255, 255, 0.15); /* un poco de glow cian */
+  box-shadow: 0 0 15px #0ff, 0 0 25px #0ff inset;
+}
+/* Caja de la pregunta con glow animado */
+.question-section {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  max-width: 400px;
+  padding: 15px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #0ff;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 22px;
+  text-align: right;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff inset;
+  animation: neonPulse 2s infinite alternate;
+}
+
+/* Animación de brillo */
+@keyframes neonPulse {
+  from {
+    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff inset;
+  }
+  to {
+    box-shadow: 0 0 20px #0ff, 0 0 40px #0ff inset;
+  }
+}
